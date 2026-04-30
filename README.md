@@ -1,3 +1,7 @@
+AgenticDebugging allows an AI to debug programs by interacting directly with LLDB and executing terminal commands.
+
+> ⚠️ The AI has full terminal access. Use in a controlled environment.
+
 # Dependencies
 
 This repository depends on Lib Ghostty 
