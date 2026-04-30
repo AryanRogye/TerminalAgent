@@ -14,9 +14,20 @@ fi
 MODEL_NAME="$1"
 FINE_TUNE_FOLDER="$2"
 
+source ./venv/bin/activate
+
+python3 - <<EOF
+from transformers import AutoTokenizer
+tok = AutoTokenizer.from_pretrained("$MODEL_NAME")
+template = tok.chat_template or ""
+if not template:
+    print("WARNING: Model tokenizer does not define a chat template")
+    print("mlx_lm may require a model-specific template for messages-format data")
+    exit(1)
+EOF
+
 echo "Training $MODEL_NAME"
 
-source ./venv/bin/activate
 
 mlx_lm lora \
   --model "$MODEL_NAME" \
