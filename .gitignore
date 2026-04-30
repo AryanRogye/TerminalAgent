@@ -1,2 +1,23 @@
 include/
 libghostty-vt.a
+
+*.DS_Store
+
+/Packages
+xcuserdata/
+
+*.swiftpm/
+*.swiftpm/configuration/registries.json
+*.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+
+# Xcode
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.xcscmblueprint
+*.app
+buildServer.json
+swiftui-pro/
