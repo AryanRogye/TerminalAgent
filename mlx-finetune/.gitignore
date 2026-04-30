@@ -1,0 +1,15 @@
+# MLX Outputs
+adapters/
+output_model/
+*.safetensors
+*.npz
+*.bin
+
+# Python Environment
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# macOS System Files
+.DS_Store
